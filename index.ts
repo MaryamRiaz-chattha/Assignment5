@@ -85,11 +85,10 @@ console.log("Count of positive numbers:", positiveCount);
 
 function filterWordsA(words: string[]): string[] {
     const result: string[] = [];
-    // Iterate over each word in the array
-    words.forEach(word => {//foreach method Calls a function for each element in the array
-        // Check if the word starts with 'a' (case-insensitive)
+    
+    words.forEach(word => { 
         if (word.toLowerCase().startsWith('a')) {
-            // If it does, add it to the result array
+            
             result.push(word);
         }
     });
@@ -180,11 +179,10 @@ console.log(filteredArray); // Output: [42, "hello"]
 const arr1: number[] = [1, 2, 3];
 const arr2: number[] = [4, 5, 6];
 
-// Concatenate the arrays
+
 const concatenatedArray: number[] = arr1.concat(arr2);
 
-// Log the concatenated array
-console.log(concatenatedArray); // Output: [1, 2, 3, 4, 5, 6]
+console.log(concatenatedArray); 
 //Q18
 //Develop a function called sumOfElements that calculates the sum of all elements in an array that are either even or odd, based on a parameter.
 function sumOfElements(arr: number[], isEven: boolean): number {
@@ -238,7 +236,7 @@ function findSmallestNumber(arr: number[]): number {
 
 const my_array: number[] = [3, 1, 5, 2, 4];
 const smallestNumber: number = findSmallestNumber(my_array);
-console.log("The smallest number is:", smallestNumber); // Output: 1
+console.log("The smallest number is:", smallestNumber); 
 
 /*...................Functions....................*/
 
@@ -267,15 +265,15 @@ function filterByLength(strings: string[], n: number): string[] {
 }
 const words: string[] = ["apple", "banana", "orange", "kiwi", "grape"];
 const filteredWords: string[] = filterByLength(words, 5);
-console.log("Filtered words:", filteredWords); // Output: ["banana", "orange"]
+console.log("Filtered words:", filteredWords); 
 //Q23
 //Create a function findDuplicates that finds and logs all duplicates in an array.
-function findDuplicates(arr: any[]): void {
+function findDuplicates(arr: number[]): void {
   const seen: Record<string, boolean> = {};
   const duplicates: any[] = [];
 
   for (let item of arr) {
-      // If the item is already in seen, it's a duplicate
+      
       if (seen[item]) {
           duplicates.push(item);
       } else {
@@ -284,11 +282,11 @@ function findDuplicates(arr: any[]): void {
       }
   }
 
-  // Log the duplicates
+  
   console.log("Duplicates:", duplicates);
 }
 
-const MyArray: any[] = [1, 2, 3, 4, 2, 5, 6, 3];
+const MyArray: number[] = [1, 2, 3, 4, 2, 5, 6, 3];
 findDuplicates(MyArray);
 //Q24Write a function incrementAll that takes an array of integers and increments each element by one.
 function incrementAll(arr: number[]): void {
@@ -315,7 +313,7 @@ function countOccurrences(arr: any[], element: any): number {
 }
 
 
-const my_Array: any[] = [1, 2, 3, 4, 2, 5, 6, 3, 2];
+const my_Array: number[] = [1, 2, 3, 4, 2, 5, 6, 3, 2];
 const elementToCount = 2;
 const occurrences = countOccurrences(my_Array, elementToCount);
 console.log(`The element ${elementToCount} appears ${occurrences} times.`);
@@ -346,17 +344,17 @@ function formatNames(names: string[]): string {
       const formattedNames = names.slice(0, -2).join(", ") + ", " + names.slice(-2).join(" and ");
       return formattedNames;
   }
-const names1: string[] = ["Alice", "Bob", "Charlie", "David"];
-console.log(formatNames(names1)); // Output: "Alice, Bob, Charlie and David"
+const names1: string[] = ["maryam", "zarish", "fizu", "isha"];
+console.log(formatNames(names1)); 
 
-const names2: string[] = ["Alice", "Bob"];
-console.log(formatNames(names2)); // Output: "Alice and Bob"
+const names2: string[] = ["maryam", "zarish"];
+console.log(formatNames(names2)); 
 
-const names3: string[] = ["Alice"];
-console.log(formatNames(names3)); // Output: "Alice"
+const names3: string[] = ["maryam"];
+console.log(formatNames(names3)); 
 
 const names4: string[] = [];
-console.log(formatNames(names4)); // Output: ""
+console.log(formatNames(names4)); 
 //Q28
 //Develop a function that converts an array of Fahrenheit temperatures to Celsius and logs the new temperatures.
 
@@ -410,7 +408,7 @@ function swapElements(arr: any[], index1: number, index2: number): void {
       throw new Error("Indices are out of bounds.");
   }
 
-  // Swap elements at the specified indices
+  
   const temp = arr[index1];
   arr[index1] = arr[index2];
   arr[index2] = temp;
@@ -419,7 +417,7 @@ function swapElements(arr: any[], index1: number, index2: number): void {
 
 const array: any[] = ["a", "b", "c", "d", "e"];
 swapElements(array, 1, 3);
-console.log("Swapped array:", array); // Output: ["a", "d", "c", "b", "e"]
+console.log("Swapped array:", array); 
 
 /*.....................HARD............................*/
 //Q31
@@ -483,14 +481,14 @@ console.log("Sorted array:", sortedNumbers); // Output: [1, 2, 3, 4, 5]
 //Q34
 //Develop a TypeScript program that logs every element of an array in reverse order without using the .reverse() method.
 
-function logArrayReversed(arr: any[]): void {
+function logArrayReversed(arr: number[]): void {
   for (let i = arr.length - 1; i >= 0; i--) {
       console.log(arr[i]);
   }
 }
 
 
-const myArray: any[] = [1, 2, 3, 4, 5];
+const myArray: number[] = [1, 2, 3, 4, 5];
 logArrayReversed(myArray);
 //Q35
 //Write a script that simulates a basic calculator. It should take two operands and an operator ('+', '-', '*', '/') from the user, perform the operation, and log the result.
